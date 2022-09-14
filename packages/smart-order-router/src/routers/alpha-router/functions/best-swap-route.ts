@@ -26,7 +26,8 @@ export async function getBestSwapRoute(
   routeType: TradeType,
   chainId: ChainId,
   routingConfig: AlphaRouterConfig,
-  gasModel?: IGasModel<V3RouteWithValidQuote>
+  // TODO: debug joy, fix
+  // gasModel?: IGasModel<V3RouteWithValidQuote>
 ): Promise<{
   quote: CurrencyAmount;
   quoteGasAdjusted: CurrencyAmount;
@@ -79,7 +80,8 @@ export async function getBestSwapRoute(
     chainId,
     (rq: RouteWithValidQuote) => rq.quoteAdjustedForGas,
     routingConfig,
-    gasModel
+    // TODO: debug joy, fix
+    // gasModel
   );
 
   // It is possible we were unable to find any valid route given the quotes.

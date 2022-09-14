@@ -26,7 +26,7 @@ import {
     GasPrice,
     LegacyGasPriceProvider,
     EIP1559GasPriceProvider,
-    OnChainGasPriceProvider, CachingGasStationProvider,
+    OnChainGasPriceProvider, CachingGasStationProvider, V2SubgraphProvider,
 } from '@teleswap/smart-order-router';
 import {
     QuoteResponse,
@@ -159,6 +159,7 @@ export const quote: Handler = async (req, res) => {
                     new NodeCache({ stdTTL: 15, useClones: true })
                 ),
             ),
+            v2SubgraphProvider: new V2SubgraphProvider(chainId),
             v3GasModelFactory: new V3HeuristicGasModelFactory(),
             blockedTokenListProvider,
             tokenProvider,
