@@ -1,0 +1,66 @@
+{
+  "name": "teleswap-router",
+  "private": true,
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ],
+    "nohoist": [
+      "**/jest",
+      "**/jest/**",
+      "@ethersproject/providers",
+      "@nomicfoundation/hardhat-chai-matchers",
+      "@nomicfoundation/hardhat-network-helpers",
+      "@nomicfoundation/hardhat-toolbox",
+      "@nomiclabs/hardhat-ethers",
+      "@nomiclabs/hardhat-etherscan",
+      "@openzeppelin/hardhat-upgrades",
+      "@typechain/hardhat",
+      "@types/chai",
+      "@types/mocha",
+      "chai",
+      "dotenv",
+      "ethereumjs-util",
+      "ethers",
+      "hardhat",
+      "hardhat-abi-exporter",
+      "hardhat-gas-reporter",
+      "mocha",
+      "ncp",
+      "prettier",
+      "rimraf",
+      "solc",
+      "solidity-coverage",
+      "ts-node",
+      "typechain",
+      "typescript"
+    ]
+  },
+  "scripts": {
+    "cleanup": "rimraf **/node_modules",
+    "postinstall": "lerna run build --stream",
+    "start": "yarn workspace @teleswap/ui run start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/teleport-network/interface.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/teleport-network/interface/issues"
+  },
+  "homepage": "https://github.com/teleport-network/interface#readme",
+  "devDependencies": {
+    "lerna": "^5.1.8",
+    "post-merge-install": "^0.5.1",
+    "rimraf": "^3.0.2"
+  },
+  "resolutions": {
+    "eslint-plugin-prettier": "3.1.4"
+  }
+}
