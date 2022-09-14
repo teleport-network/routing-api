@@ -1,7 +1,7 @@
 import { BigNumber } from '@ethersproject/bignumber';
 import { Protocol } from '@teleswap/router-sdk';
-import { Currency, CurrencyAmount, Token, TradeType } from '@uniswap/sdk-core';
 import { Pair } from '@teleswap/v2-sdk/dist/entities';
+import { Currency, CurrencyAmount, Token, TradeType } from '@uniswap/sdk-core';
 import { FeeAmount, MethodParameters, Pool } from '@uniswap/v3-sdk';
 import _ from 'lodash';
 

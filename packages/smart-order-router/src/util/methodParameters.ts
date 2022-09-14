@@ -4,8 +4,8 @@ import {
   SwapRouter,
   Trade,
 } from '@teleswap/router-sdk';
-import { Currency, TradeType } from '@uniswap/sdk-core';
 import { Route as V2RouteRaw } from '@teleswap/v2-sdk';
+import { Currency, TradeType } from '@uniswap/sdk-core';
 import { MethodParameters, Route as V3RouteRaw } from '@uniswap/v3-sdk';
 import _ from 'lodash';
 
