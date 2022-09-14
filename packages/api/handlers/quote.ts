@@ -364,8 +364,8 @@ export const quote: Handler = async (req, res) => {
 
             const pools =
                 subRoute.protocol == Protocol.V2
-                    ? subRoute.route.pairs
-                    : subRoute.route.pools;
+                    ? (subRoute.route as any).pairs
+                    : (subRoute.route as any).pools;
             const curRoute: V2PoolInRoute[] = [];
 
             for (let i = 0; i < pools.length; i++) {
