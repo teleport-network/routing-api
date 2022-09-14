@@ -1,10 +1,11 @@
 import { Protocol } from '@teleswap/router-sdk';
-import { Percent } from '@uniswap/sdk-core';
 import { Pair } from '@teleswap/v2-sdk';
+import { Percent } from '@uniswap/sdk-core';
 import { Pool } from '@uniswap/v3-sdk';
 import _ from 'lodash';
 
 import { CurrencyAmount } from '.';
+
 import { RouteWithValidQuote } from '../routers/alpha-router';
 import { MixedRoute, V2Route, V3Route } from '../routers/router';
 

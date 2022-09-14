@@ -1,5 +1,5 @@
-import { Token } from '@uniswap/sdk-core';
 import { Pair } from '@teleswap/v2-sdk';
+import { Token } from '@uniswap/sdk-core';
 import _ from 'lodash';
 
 import { ChainId, WRAPPED_NATIVE_CURRENCY } from '../../util/chains';
