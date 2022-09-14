@@ -6,6 +6,7 @@
     "access": "public"
   },
   "main": "dist/index.js",
+  "module": "dist/router-sdk.esm.js",
   "typings": "dist/index.d.ts",
   "files": [
     "dist"
