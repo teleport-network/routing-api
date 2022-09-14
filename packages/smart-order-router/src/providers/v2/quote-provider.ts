@@ -1,9 +1,9 @@
 import { BigNumber } from '@ethersproject/bignumber';
-import { TradeType } from '@uniswap/sdk-core';
 import {
   InsufficientInputAmountError,
   InsufficientReservesError,
 } from '@teleswap/v2-sdk';
+import { TradeType } from '@uniswap/sdk-core';
 
 import { V2Route } from '../../routers/router';
 import { CurrencyAmount } from '../../util/amounts';

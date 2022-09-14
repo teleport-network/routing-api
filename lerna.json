@@ -1,10 +1,6 @@
 {
   "packages": [
-    "packages/v2-sdk",
-    "packages/sdk-core",
-    "packages/router-sdk",
-    "packages/smart-order-router",
-    "packages/api"
+    "packages/*",
   ],
   "useNx": false,
   "npmClient": "yarn",

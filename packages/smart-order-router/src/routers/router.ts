@@ -5,6 +5,7 @@ import {
   Protocol,
   Trade,
 } from '@teleswap/router-sdk';
+import { Route as V2RouteRaw } from '@teleswap/v2-sdk';
 import {
   Currency,
   Fraction,
@@ -12,7 +13,6 @@ import {
   Token,
   TradeType,
 } from '@uniswap/sdk-core';
-import { Route as V2RouteRaw } from '@teleswap/v2-sdk';
 import {
   MethodParameters,
   Pool,

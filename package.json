@@ -42,7 +42,9 @@
   "scripts": {
     "cleanup": "rimraf **/node_modules",
     "postinstall": "lerna run build --stream",
-    "start": "yarn workspace @teleswap/ui run start"
+    "install": "yarn workspace @teleswap/v2-sdk install && yarn workspace @teleswap/sdk-core install && yarn workspace @teleswap/router-sdk install && yarn workspace @teleswap/smart-order-router install",
+    "build": "yarn workspace @teleswap/v2-sdk build && yarn workspace @teleswap/sdk-core build && yarn workspace @teleswap/router-sdk build && yarn workspace @teleswap/smart-order-router build",
+    "start": "yarn workspace @teleswap/routing-api run start"
   },
   "repository": {
     "type": "git",
