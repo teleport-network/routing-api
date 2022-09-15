@@ -6,8 +6,11 @@ import _ from 'lodash';
 import {
   DAI_OPTIMISTIC_GOERLI,
   ITokenListProvider,
-  IV2SubgraphProvider, USDC_OPTIMISTIC_GOERLI, USDT_OPTIMISTIC_GOERLI,
-  V2SubgraphPool, WBTC_OPTIMISTIC_GOERLI,
+  IV2SubgraphProvider,
+  USDC_OPTIMISTIC_GOERLI,
+  USDT_OPTIMISTIC_GOERLI,
+  V2SubgraphPool,
+  WETH_OPTIMISTIC_GOERLI,
 } from '../../../providers';
 import {
   CELO,
@@ -150,7 +153,7 @@ const baseTokensByChain: { [chainId in ChainId]?: Token[] } = {
   [ChainId.OPTIMISTIC_GOERLI]: [
     DAI_OPTIMISTIC_GOERLI,
     USDC_OPTIMISTIC_GOERLI,
-    WBTC_OPTIMISTIC_GOERLI,
+    WETH_OPTIMISTIC_GOERLI,
     USDT_OPTIMISTIC_GOERLI,
   ],
   [ChainId.ARBITRUM_ONE]: [

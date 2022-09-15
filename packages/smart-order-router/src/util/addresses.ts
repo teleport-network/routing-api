@@ -130,7 +130,7 @@ export const WETH9: {
   ),
   [ChainId.OPTIMISTIC_GOERLI]: new Token(
     ChainId.OPTIMISTIC_GOERLI,
-    '0x3D810bB0feDdCE224E3E1903B4629AB113EF9523',
+    '0xf68f4839407524D09200D733e2c201421DA3D9CE',
     18,
     'WETH',
     'Wrapped Ether'
