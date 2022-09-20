@@ -49,7 +49,7 @@ export const V2_SUPPORTED = [
 export const HAS_L1_FEE = [
   ChainId.OPTIMISM,
   ChainId.OPTIMISTIC_KOVAN,
-  ChainId.OPTIMISTIC_GOERLI,
+  // ChainId.OPTIMISTIC_GOERLI,
   ChainId.ARBITRUM_ONE,
   ChainId.ARBITRUM_RINKEBY,
 ];
@@ -346,7 +346,7 @@ export const WRAPPED_NATIVE_CURRENCY: { [chainId in ChainId]: Token } = {
   ),
   [ChainId.OPTIMISTIC_GOERLI]: new Token(
     ChainId.OPTIMISTIC_GOERLI,
-    '0x3D810bB0feDdCE224E3E1903B4629AB113EF9523',
+    '0xf68f4839407524d09200d733e2c201421da3d9ce',
     18,
     'WETH',
     'Wrapped Ether'

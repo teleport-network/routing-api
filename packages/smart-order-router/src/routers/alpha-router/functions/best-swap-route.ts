@@ -27,7 +27,7 @@ export async function getBestSwapRoute(
   chainId: ChainId,
   routingConfig: AlphaRouterConfig,
   // TODO: debug joy, fix
-  // gasModel?: IGasModel<V3RouteWithValidQuote>
+  gasModel?: IGasModel<V3RouteWithValidQuote>
 ): Promise<{
   quote: CurrencyAmount;
   quoteGasAdjusted: CurrencyAmount;
@@ -81,7 +81,7 @@ export async function getBestSwapRoute(
     (rq: RouteWithValidQuote) => rq.quoteAdjustedForGas,
     routingConfig,
     // TODO: debug joy, fix
-    // gasModel
+    gasModel
   );
 
   // It is possible we were unable to find any valid route given the quotes.
@@ -452,10 +452,11 @@ export async function getBestSwapRouteBy(
   // If swapping on an L2 that includes a L1 security fee, calculate the fee and include it in the gas adjusted quotes
   if (HAS_L1_FEE.includes(chainId)) {
     // ensure the gasModel exists and that the swap route is a v3 only route
-    const onlyV3Routes = bestSwap.every(
-      (route) => route.protocol == Protocol.V3
-    );
-    if (gasModel == undefined || !onlyV3Routes) {
+    // TODO: debug joy, v2 should use l2 too
+    // const onlyV3Routes = bestSwap.every(
+    //   (route) => route.protocol == Protocol.V3
+    // );
+    if (gasModel == undefined) {
       throw new Error("Can't compute L1 gas fees.");
     } else {
       gasCostsL1ToL2 = await gasModel.calculateL1GasFees!(

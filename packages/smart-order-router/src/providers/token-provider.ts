@@ -253,28 +253,28 @@ export const DAI_OPTIMISTIC_KOVAN = new Token(
 
 export const USDC_OPTIMISTIC_GOERLI = new Token(
   ChainId.OPTIMISTIC_GOERLI,
-  '0x56c822f91C1DC40ce32Ae6109C7cc1D18eD08ECE',
+  '0x56c822f91c1dc40ce32ae6109c7cc1d18ed08ece',
   6,
   'USDC',
   'USD//C'
 );
 export const USDT_OPTIMISTIC_GOERLI = new Token(
   ChainId.OPTIMISTIC_GOERLI,
-  '0x70aBC17e870366C336A5DAd05061828fEff76fF5',
+  '0x70abc17e870366c336a5dad05061828feff76ff5',
   6,
   'USDT',
   'Tether USD'
 );
 export const WETH_OPTIMISTIC_GOERLI = new Token(
   ChainId.OPTIMISTIC_GOERLI,
-  '0xf68f4839407524D09200D733e2c201421DA3D9CE',
+  '0xf68f4839407524d09200d733e2c201421da3d9ce',
   18,
   'WETH',
   'Wrapped ETH'
 );
 export const DAI_OPTIMISTIC_GOERLI = new Token(
   ChainId.OPTIMISTIC_GOERLI,
-  '0x04df1ac7cdD21c065Dcbb73AF9933EECc0F6A59B',
+  '0x04df1ac7cdd21c065dcbb73af9933eecc0f6a59b',
   18,
   'DAI',
   'Dai Stablecoin'

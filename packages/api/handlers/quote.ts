@@ -41,16 +41,16 @@ import {
 import { ethers } from 'ethers';
 import NodeCache from 'node-cache';
 import { default as bunyan, default as Logger } from 'bunyan';
-import { Protocol } from '@uniswap/router-sdk';
+import { Protocol } from '@teleswap/router-sdk';
 import _ from 'lodash';
 import JSBI from 'jsbi';
 import { TradeType } from '@uniswap/sdk-core';
 import { Pool } from '@uniswap/v3-sdk';
 
+// TODO: update chainId
+const chainId: ChainId = ID_TO_CHAIN_ID(420);
 
 export const quote: Handler = async (req, res) => {
-    const chainId: ChainId = ID_TO_CHAIN_ID(420);
-    let before = Date.now();
     if (req.body) {
         const {
             tokenInAddress,
@@ -144,6 +144,7 @@ export const quote: Handler = async (req, res) => {
         });
         setGlobalLogger(log);
 
+        console.log('debug joy', chainId.toString())
         const router = new AlphaRouter({
             chainId: chainId,
             provider: provider,

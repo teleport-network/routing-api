@@ -1,10 +1,10 @@
 import {BigNumber} from '@ethersproject/bignumber';
 import {BaseProvider, JsonRpcProvider} from '@ethersproject/providers';
-import DEFAULT_TOKEN_LIST from '@uniswap/default-token-list';
 import {Protocol, SwapRouter, Trade} from '@teleswap/router-sdk';
+import {Pair} from '@teleswap/v2-sdk';
+import DEFAULT_TOKEN_LIST from '@uniswap/default-token-list';
 import {Currency, Fraction, Token, TradeType} from '@uniswap/sdk-core';
 import {TokenList} from '@uniswap/token-lists';
-import {Pair} from '@teleswap/v2-sdk';
 import {
   MethodParameters,
   Pool,
@@ -591,7 +591,9 @@ export class AlphaRouter
     this.swapRouterProvider =
       swapRouterProvider ?? new SwapRouterProvider(this.multicall2Provider);
 
-    if (chainId == ChainId.OPTIMISM || chainId == ChainId.OPTIMISTIC_KOVAN || chainId == ChainId.OPTIMISTIC_GOERLI) {
+    if (chainId == ChainId.OPTIMISM ||
+      chainId == ChainId.OPTIMISTIC_KOVAN ||
+      chainId == ChainId.OPTIMISTIC_GOERLI) {
       this.l2GasDataProvider =
         optimismGasDataProvider ??
         new OptimismGasDataProvider(chainId, this.multicall2Provider);
@@ -867,6 +869,7 @@ export class AlphaRouter
 
     const protocolsSet = new Set(protocols ?? []);
 
+    // TODO: debug joy, l2 gas fee
     // const v3gasModel = await this.v3GasModelFactory.buildGasModel({
     //   chainId: this.chainId,
     //   gasPriceWei,
@@ -875,7 +878,7 @@ export class AlphaRouter
     //   v2poolProvider: this.v2PoolProvider,
     //   l2GasDataProvider: this.l2GasDataProvider,
     // });
-    //
+
     // const mixedRouteGasModel =
     //   await this.mixedRouteGasModelFactory.buildGasModel({
     //     chainId: this.chainId,

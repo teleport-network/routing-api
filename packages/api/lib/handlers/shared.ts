@@ -102,6 +102,7 @@ export async function tokenStringToCurrency(
 
   let token: Currency | undefined = undefined
 
+  console.log('debug joy', chainId)
   if (NATIVE_NAMES_BY_ID[chainId]!.includes(tokenRaw)) {
     token = nativeOnChain(chainId)
   } else if (isAddress(tokenRaw)) {
