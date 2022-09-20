@@ -174,13 +174,7 @@ export const quote: Handler = async (req, res) => {
             log,
         );
 
-        const currencyOut = await tokenStringToCurrency(
-            tokenListProvider,
-            tokenProvider,
-            tokenOutAddress,
-            tokenOutChainId,
-            log,
-        );
+        const currencyOut = await tokenStringToCurrency(tokenListProvider, tokenProvider, tokenOutAddress, tokenOutChainId, log);
 
         if (!currencyIn) {
             res.status(400).send(JSON.stringify({

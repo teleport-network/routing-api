@@ -92,17 +92,16 @@ export const DEFAULT_ROUTING_CONFIG_BY_CHAIN = (chainId: ChainId): AlphaRouterCo
 }
 
 export async function tokenStringToCurrency(
-  tokenListProvider: ITokenListProvider,
-  tokenProvider: ITokenProvider,
-  tokenRaw: string,
-  chainId: ChainId,
-  log: Logger
+    tokenListProvider: ITokenListProvider,
+    tokenProvider: ITokenProvider,
+    tokenRaw: string,
+    chainId: ChainId,
+    log: Logger
 ): Promise<Currency | undefined> {
   const isAddress = (s: string) => s.length == 42 && s.startsWith('0x')
 
   let token: Currency | undefined = undefined
 
-  console.log('debug joy', chainId)
   if (NATIVE_NAMES_BY_ID[chainId]!.includes(tokenRaw)) {
     token = nativeOnChain(chainId)
   } else if (isAddress(tokenRaw)) {
