@@ -733,28 +733,30 @@ export async function getV2CandidatePools({
   // subgraph query for some reason (e.g. trackedReserveETH was 0), then we still consider it.
   let topByDirectSwapPool: V2SubgraphPool[] = [];
   if (topNDirectSwaps != 0) {
-    // TODO: debug joy, fix
-    const { token0, token1, poolAddress } = poolProvider.getPoolAddress(
-      tokenIn,
-      tokenOut,
-      false,
-    );
+    [0, 1].forEach((v) => {
+      const stable = v == 0
+      const { token0, token1, poolAddress } = poolProvider.getPoolAddress(
+        tokenIn,
+        tokenOut,
+        stable
+      );
 
-    topByDirectSwapPool = [
-      {
-        id: poolAddress,
-        token0: {
-          id: token0.address,
+      topByDirectSwapPool = [
+        {
+          id: poolAddress,
+          token0: {
+            id: token0.address,
+          },
+          token1: {
+            id: token1.address,
+          },
+          stable: stable,
+          supply: 10000, // Not used. Set to arbitrary number.
+          reserve: 10000, // Not used. Set to arbitrary number.
+          reserveUSD: 10000, // Not used. Set to arbitrary number.
         },
-        token1: {
-          id: token1.address,
-        },
-        stable: false,
-        supply: 10000, // Not used. Set to arbitrary number.
-        reserve: 10000, // Not used. Set to arbitrary number.
-        reserveUSD: 10000, // Not used. Set to arbitrary number.
-      },
-    ];
+      ];
+    })
   }
 
   addToAddressSet(topByDirectSwapPool);
@@ -931,6 +933,8 @@ export async function getV2CandidatePools({
     `V2 Candidate pools`
   );
 
+  console.log('debug joy', "subgraphPools", subgraphPools)
+
   const tokenPairsRaw = _.map<V2SubgraphPool, [Token, Token, boolean] | undefined>(
     subgraphPools,
     (subgraphPool) => {
@@ -943,6 +947,8 @@ export async function getV2CandidatePools({
         );
         return undefined;
       }
+
+      console.log('debug joy', 'tokenPairsRaw', subgraphPool.token0.id, subgraphPool.token1.id, subgraphPool.stable)
 
       return [tokenA, tokenB, subgraphPool.stable];
     }
