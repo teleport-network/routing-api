@@ -751,7 +751,7 @@ export const DEFAULT_TOKENS = {
     },
     {
       "name": "Dai Stablecoin",
-      "address": "0x04df1ac7cdD21c065Dcbb73AF9933EECc0F6A59B",
+      "address": "0xA453b732C570F7bd113B8533D686AaD7479062F7",
       "symbol": "DAI",
       "decimals": 18,
       "chainId": 420,
@@ -759,7 +759,7 @@ export const DEFAULT_TOKENS = {
     },
     {
       "name": "USDCoin",
-      "address": "0x56c822f91C1DC40ce32Ae6109C7cc1D18eD08ECE",
+      "address": "0xD385A8D07245eD86B323f1ceBaF32880333133eF",
       "symbol": "USDC",
       "decimals": 6,
       "chainId": 420,
@@ -767,7 +767,7 @@ export const DEFAULT_TOKENS = {
     },
     {
       "name": "Tether USD",
-      "address": "0x70aBC17e870366C336A5DAd05061828fEff76fF5",
+      "address": "0x0298735f44b0AE5E91BF36C6920fbA6c16392A76",
       "symbol": "USDT",
       "decimals": 6,
       "chainId": 420,
@@ -775,7 +775,7 @@ export const DEFAULT_TOKENS = {
     },
     {
       "name": "Teleswap Token",
-      "address": "0x428D01ca9430e59bE114d3671950B426f1Bb84a0",
+      "address": "0x8645b50Fd4Ed166Da1E480a01EaA2399ff3c86Db",
       "symbol": "TT",
       "decimals": 18,
       "chainId": 420,
@@ -783,7 +783,7 @@ export const DEFAULT_TOKENS = {
     },
     {
       "name": "Wrapped Ether",
-      "address": "0xf68f4839407524D09200D733e2c201421DA3D9CE",
+      "address": "0x86B6c370273e4f27D0c989b8EcDAA6D74dadBB9F",
       "symbol": "WETH",
       "decimals": 18,
       "chainId": 420,

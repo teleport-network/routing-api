@@ -751,7 +751,7 @@ export const DEFAULT_TOKENS = {
     },
     {
       "name": "Dai Stablecoin",
-      "address": "0x04df1ac7cdd21c065dcbb73af9933eecc0f6a59b",
+      "address": "0xA453b732C570F7bd113B8533D686AaD7479062F7",
       "symbol": "DAI",
       "decimals": 18,
       "chainId": 420,
@@ -759,7 +759,7 @@ export const DEFAULT_TOKENS = {
     },
     {
       "name": "USDCoin",
-      "address": "0x56c822f91c1dc40ce32ae6109c7cc1d18ed08ece",
+      "address": "0xD385A8D07245eD86B323f1ceBaF32880333133eF",
       "symbol": "USDC",
       "decimals": 6,
       "chainId": 420,
@@ -767,7 +767,7 @@ export const DEFAULT_TOKENS = {
     },
     {
       "name": "Tether USD",
-      "address": "0x70abc17e870366c336a5dad05061828feff76ff5",
+      "address": "0x0298735f44b0AE5E91BF36C6920fbA6c16392A76",
       "symbol": "USDT",
       "decimals": 6,
       "chainId": 420,
@@ -775,7 +775,7 @@ export const DEFAULT_TOKENS = {
     },
     {
       "name": "Wrapped Ether",
-      "address": "0xf68f4839407524d09200d733e2c201421da3d9ce",
+      "address": "0x86B6c370273e4f27D0c989b8EcDAA6D74dadBB9F",
       "symbol": "WETH",
       "decimals": 18,
       "chainId": 420,
