@@ -751,7 +751,7 @@ export const DEFAULT_TOKENS = {
     },
     {
       "name": "Dai Stablecoin",
-      "address": "0xA453b732C570F7bd113B8533D686AaD7479062F7",
+      "address": "0x38fa58a6a83d97389be88752daa408e2fea40c8b",
       "symbol": "DAI",
       "decimals": 18,
       "chainId": 420,
@@ -759,7 +759,7 @@ export const DEFAULT_TOKENS = {
     },
     {
       "name": "USDCoin",
-      "address": "0xD385A8D07245eD86B323f1ceBaF32880333133eF",
+      "address": "0xa60306d462cb8a64cf1652ee9c41e12e47d384c4",
       "symbol": "USDC",
       "decimals": 6,
       "chainId": 420,
@@ -767,23 +767,15 @@ export const DEFAULT_TOKENS = {
     },
     {
       "name": "Tether USD",
-      "address": "0x0298735f44b0AE5E91BF36C6920fbA6c16392A76",
+      "address": "0x5986c8ffadca9cee5c28a85cc3d4f335aab5dc90",
       "symbol": "USDT",
       "decimals": 6,
       "chainId": 420,
       "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xdAC17F958D2ee523a2206206994597C13D831ec7/logo.png"
     },
     {
-      "name": "Teleswap Token",
-      "address": "0x8645b50Fd4Ed166Da1E480a01EaA2399ff3c86Db",
-      "symbol": "TT",
-      "decimals": 18,
-      "chainId": 420,
-      "logoURI": "ipfs://QmXttGpZrECX5qCyXbBQiqgQNytVGeZW5Anewvh2jc4psg"
-    },
-    {
       "name": "Wrapped Ether",
-      "address": "0x86B6c370273e4f27D0c989b8EcDAA6D74dadBB9F",
+      "address": "0x4200000000000000000000000000000000000006",
       "symbol": "WETH",
       "decimals": 18,
       "chainId": 420,
