@@ -35,6 +35,7 @@ export type V2PoolInRoute = {
   reserve1: V2Reserve
   amountIn?: string
   amountOut?: string
+  stable: boolean
 }
 
 export const QuoteResponseSchemaJoi = Joi.object().keys({
@@ -77,5 +78,6 @@ export type QuoteResponse = {
   blockNumber: string
   route: Array<(V3PoolInRoute | V2PoolInRoute)[]>
   routeString: string
+  percents: Array<number>
   methodParameters?: MethodParameters
 }

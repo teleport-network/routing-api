@@ -358,7 +358,11 @@ export const quote: Handler = async (req, res) => {
 
         const routeResponse: Array<V2PoolInRoute[]> = [];
 
+        const percents = []
+
         for (const subRoute of route) {
+            percents.push(subRoute.percent)
+
             const {amount, quote, tokenPath} = subRoute;
 
             const pools =
@@ -433,6 +437,7 @@ export const quote: Handler = async (req, res) => {
                         },
                         amountIn: edgeAmountIn,
                         amountOut: edgeAmountOut,
+                        stable: nextPool.stable,
                     });
                 }
             }
@@ -457,6 +462,7 @@ export const quote: Handler = async (req, res) => {
             gasPriceWei: gasPriceWei.toString(),
             route: routeResponse,
             routeString: routeAmountsToString(route),
+            percents: percents,
             // TODO: debug joy, fix
             quoteId: '',
         };
