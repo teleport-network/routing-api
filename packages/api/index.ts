@@ -18,3 +18,12 @@ routes.forEach((route) => {
 app.listen(PORT, () => {
   console.log(`Express with Typescript! http://localhost:${PORT}`);
 });
+
+app.on('uncaughtException', function (err) {
+  console.log('debug joy', 'crash!!!!', err);
+  try {
+
+  } catch (e) {
+    console.log('error when exit', e.stack);
+  }
+});

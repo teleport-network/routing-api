@@ -278,13 +278,17 @@ export const quote: Handler = async (req, res) => {
                         amount.currency.symbol
                     }, Want: ${currencyOut.symbol}. Chain: ${chainId}`,
                 );
-                swapRoute = await router.route(
-                    amount,
-                    currencyOut,
-                    TradeType.EXACT_INPUT,
-                    swapParams,
-                    routingConfig,
-                );
+                try {
+                    swapRoute = await router.route(
+                        amount,
+                        currencyOut,
+                        TradeType.EXACT_INPUT,
+                        swapParams,
+                        routingConfig,
+                    );
+                }catch (e) {
+                    log.error(e)
+                }
                 break;
             case 'exactOut':
                 amount = CurrencyAmount.fromRawAmount(

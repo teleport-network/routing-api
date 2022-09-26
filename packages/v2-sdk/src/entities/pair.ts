@@ -19,6 +19,10 @@ export const computePairAddress = ({
   stable: boolean
 }): string => {
   const [token0, token1] = tokenA.sortsBefore(tokenB) ? [tokenA, tokenB] : [tokenB, tokenA] // does safety checks
+  console.log('debug joy', factoryAddress)
+  console.log('debug joy', INIT_CODE_HASH)
+  console.log('debug joy', keccak256(['bytes'], [pack(['address', 'address', 'bool'], [token0.address, token1.address, stable])]),)
+
   return getCreate2Address(
     factoryAddress,
     keccak256(['bytes'], [pack(['address', 'address', 'bool'], [token0.address, token1.address, stable])]),
@@ -30,7 +34,7 @@ export class Pair {
   private readonly tokenAmounts: [CurrencyAmount<Token>, CurrencyAmount<Token>]
   public readonly stable: boolean
 
-  public static getAddress(tokenA: Token, tokenB: Token, stable: boolean): string {
+  public static getAddress(tokenA: Token, tokenB: Token, stable: boolean = false): string {
     return computePairAddress({ factoryAddress: FACTORY_ADDRESS, tokenA, tokenB, stable })
   }
 
