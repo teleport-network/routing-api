@@ -7,8 +7,10 @@ dotenv.config()
 
 const app = express();
 const PORT = process.env.PORT;
+const cors = require('cors')
 
 app.use(bodyParser.urlencoded({ extended: false }));
+app.use(cors())
 
 routes.forEach((route) => {
   const { method, path, middleware, handler } = route;
