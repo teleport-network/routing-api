@@ -58,6 +58,7 @@
   },
   "homepage": "https://github.com/teleport-network/interface#readme",
   "devDependencies": {
+    "body-parser": "^1.20.0",
     "cors": "^2.8.5",
     "lerna": "^5.1.8",
     "post-merge-install": "^0.5.1",

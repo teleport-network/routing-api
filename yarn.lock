@@ -4947,9 +4947,9 @@
   "resolved" "https://registry.npmjs.org/bn.js/-/bn.js-4.11.6.tgz"
   "version" "4.11.6"
 
-"body-parser@^1.16.0", "body-parser@^1.19.0", "body-parser@1.20.0":
+"body-parser@^1.16.0", "body-parser@^1.19.0", "body-parser@^1.20.0", "body-parser@1.20.0":
   "integrity" "sha512-DfJ+q6EPcGKZD1QWUjSpqp+Q7bDQTsQIF4zfUAtZ6qk+H/3/QRhg9CEp39ss+/T2vw0+HaidC0ecJj/DRLIaKg=="
-  "resolved" "https://registry.npmjs.org/body-parser/-/body-parser-1.20.0.tgz"
+  "resolved" "https://registry.npmmirror.com/body-parser/-/body-parser-1.20.0.tgz"
   "version" "1.20.0"
   dependencies:
     "bytes" "3.1.2"

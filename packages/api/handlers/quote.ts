@@ -68,6 +68,16 @@ export const quote: Handler = async (req, res) => {
             protocols: protocolsStr,
         } = req.body
 
+        if (tokenInAddress === undefined) {
+            res.status(400).send(JSON.stringify({
+                errorCode: 'TOKEN_IN_INVALID',
+                detail: `Invalid token in adress`,
+            }))
+            return
+        }
+
+        console.log('token in', tokenInAddress)
+
         const url = process.env.WEB3_RPC_OPGOERLI;
         const provider = new ethers.providers.JsonRpcProvider(
             {
@@ -144,7 +154,6 @@ export const quote: Handler = async (req, res) => {
         });
         setGlobalLogger(log);
 
-        console.log('debug joy', chainId.toString())
         const router = new AlphaRouter({
             chainId: chainId,
             provider: provider,

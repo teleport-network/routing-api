@@ -1,6 +1,7 @@
 import { health } from './handlers/health';
 import { Route } from './types';
 import {quote} from "./handlers/quote";
+import bodyParser from 'body-parser';
 
 export const routes: Route[] = [
   {
@@ -12,7 +13,7 @@ export const routes: Route[] = [
   {
     method: 'post',
     path: '/quote',
-    middleware: [],
+    middleware: [bodyParser.json(), bodyParser.urlencoded({ extended: false })],
     handler: quote,
   },
 ];
