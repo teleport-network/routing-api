@@ -761,7 +761,7 @@ export const DEFAULT_TOKENS = {
       "name": "USDCoin",
       "address": "0x53b1c6025e3f9b149304cf1b39ee7c577d76c6ca",
       "symbol": "USDC",
-      "decimals": 6,
+      "decimals": 18,
       "chainId": 420,
       "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48/logo.png"
     },
@@ -769,7 +769,7 @@ export const DEFAULT_TOKENS = {
       "name": "Tether USD",
       "address": "0x5986c8ffadca9cee5c28a85cc3d4f335aab5dc90",
       "symbol": "USDT",
-      "decimals": 6,
+      "decimals": 18,
       "chainId": 420,
       "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xdAC17F958D2ee523a2206206994597C13D831ec7/logo.png"
     },

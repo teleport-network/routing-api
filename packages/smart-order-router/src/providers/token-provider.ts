@@ -254,14 +254,14 @@ export const DAI_OPTIMISTIC_KOVAN = new Token(
 export const USDC_OPTIMISTIC_GOERLI = new Token(
   ChainId.OPTIMISTIC_GOERLI,
   '0x53b1c6025e3f9b149304cf1b39ee7c577d76c6ca',
-  6,
+  18,
   'USDC',
   'USD//C'
 );
 export const USDT_OPTIMISTIC_GOERLI = new Token(
   ChainId.OPTIMISTIC_GOERLI,
   '0x5986c8ffadca9cee5c28a85cc3d4f335aab5dc90',
-  6,
+  18,
   'USDT',
   'Tether USD'
 );

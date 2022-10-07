@@ -26,7 +26,6 @@ export async function getBestSwapRoute(
   routeType: TradeType,
   chainId: ChainId,
   routingConfig: AlphaRouterConfig,
-  // TODO: debug joy, fix
   gasModel?: IGasModel<V3RouteWithValidQuote>
 ): Promise<{
   quote: CurrencyAmount;
